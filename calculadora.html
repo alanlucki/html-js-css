@@ -1,0 +1,122 @@
+<html>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">Calculadora</td>
+      </tr>
+      <tr>
+        <td>Numero 01:</td>
+        <td>
+          <input type="text" id="txtNumero01" />
+        </td>
+      </tr>
+      <tr>
+        <td>Numero 02:</td>
+        <td>
+          <input type="text" id="txtNumero02" />
+        </td>
+      </tr>
+      <tr>
+        <td>Resultado:</td>
+        <td>
+          <input type="text" id="txtResultado" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button id="btnSuma">+</button>
+          <button id="btnResta">-</button>
+          <button id="btnMultiplicacion">*</button>
+          <button id="btnDivision">/</button>
+          <button id="btnResiduo">%</button>
+          <button id="btnLimpiar">AC</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+  <style>
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+  </style>
+  
+  <script>
+    imprimir = (x) => {
+      if (x >= 0) {
+        txtResultado.classList.remove("red");
+        txtResultado.classList.add("blue");
+      } else {
+        txtResultado.classList.remove("blue");
+        txtResultado.classList.add("red");
+      }
+
+      txtResultado.value = x;
+    };
+
+    btnSuma.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseFloat(n1) + parseFloat(n2);
+
+      imprimir(s);
+      // imprimir
+    };
+    btnResta.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseFloat(n1) - parseFloat(n2);
+
+      // imprimir
+      imprimir(s);
+    };
+    btnMultiplicacion.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseFloat(n1) * parseFloat(n2);
+
+      // imprimir
+      imprimir(s);
+    };
+    btnDivision.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseFloat(n1) / parseFloat(n2);
+
+      // imprimir
+      imprimir(s);
+    };
+    btnResiduo.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseInt(n1) % parseInt(n2);
+
+      // imprimir
+      imprimir(s);
+    };
+    btnLimpiar.onclick = () => {
+      txtNumero01.value = "";
+      txtNumero02.value = "";
+      txtResultado.value = "";
+    };
+  </script>
+</html>

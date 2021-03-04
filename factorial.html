@@ -1,0 +1,51 @@
+<html>
+
+<body>
+  <table>
+    <tr>
+      <td colspan="2">Factorial de un número</td>
+    </tr>
+    <tr>
+      <td>Numero:</td>
+      <td>
+        <input type="text" id="txtNumero" />
+      </td>
+    </tr>
+    <tr>
+      <td>Resultado:</td>
+      <td>
+        <input type="text" id="txtResultado" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="btnLimpiar">Limpiar</button>
+      </td>
+      <td>
+        <button id="btnProcesar">Procesar</button>
+      </td>
+    </tr>
+  </table>
+</body>
+
+<script>
+
+  btnProcesar.onclick = () => {
+    // leer
+    n = txtNumero.value
+    // inicializa variable
+    f = 1
+    // procesar
+    for (i = 2; i <= n; i++) f *= i
+
+    // imprimir
+    txtResultado.value = f
+  }
+
+  btnLimpiar.onclick = () => {
+    txtNumero.value = ""
+  }
+
+</script>
+
+</html>

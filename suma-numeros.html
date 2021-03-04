@@ -1,0 +1,56 @@
+<html>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">Suma de 02 Números</td>
+      </tr>
+      <tr>
+        <td>Numero 01:</td>
+        <td>
+          <input type="text" id="txtNumero01" />
+        </td>
+      </tr>
+      <tr>
+        <td>Numero 02:</td>
+        <td>
+          <input type="text" id="txtNumero02" />
+        </td>
+      </tr>
+      <tr>
+        <td>Resultado:</td>
+        <td>
+          <input type="text" id="txtResultado" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="btnLimpiar">Limpiar</button>
+        </td>
+        <td>
+          <button id="btnProcesar">Procesar</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+  <script>
+    
+    btnProcesar.onclick = () => {
+      // leer
+      n1 = txtNumero01.value;
+      n2 = txtNumero02.value;
+
+      // procesar
+      s = parseFloat(n1) + parseFloat(n2);
+
+      // imprimir
+      txtResultado.value = s;
+    };
+
+    btnLimpiar.onclick = () => {
+      txtNumero01.value = "";
+      txtNumero02.value = "";
+    };
+
+  </script>
+</html>

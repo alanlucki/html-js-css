@@ -1,0 +1,123 @@
+<html>
+  <body class="consolas">
+    <table>
+      <tr>
+        <td colspan="2">Calculadora</td>
+      </tr>
+      <tr>
+        <td>a =</td>
+        <td>
+          <input type="text" id="txtA" />
+        </td>
+      </tr>
+      <tr>
+        <td>b =</td>
+        <td>
+          <input type="text" id="txtB" />
+        </td>
+      </tr>
+      <tr>
+        <td>a + b =</td>
+        <td>
+          <input type="text" id="txtSuma" />
+        </td>
+      </tr>
+      <tr>
+        <td>a - b =</td>
+        <td>
+          <input type="text" id="txtResta" />
+        </td>
+      </tr>
+      <tr>
+        <td>a * b =</td>
+        <td>
+          <input type="text" id="txtMultiplicacion" />
+        </td>
+      </tr>
+      <tr>
+        <td>a / b =</td>
+        <td>
+          <input type="text" id="txtDivision" />
+        </td>
+      </tr>
+      <tr>
+        <td>a % b =</td>
+        <td>
+          <input type="text" id="txtResiduo" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="btnLimpiar">Limpiar</button>
+        </td>
+        <td>
+          <button id="btnProcesar">Procesar</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+  <style>
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+    .consolas {
+      font-family: "Consolas";
+    }
+  </style>
+
+  <script>
+
+    txtSuma.disabled = true;
+    txtResta.disabled = true;
+    txtMultiplicacion.disabled = true;
+    txtDivision.disabled = true;
+    txtResiduo.disabled = true;
+      
+    color = (x) => {
+      n = parseFloat(x.value);
+      if (n >= 0) {
+        x.classList.remove("red");
+        x.classList.add("blue");
+      } else {
+        x.classList.remove("blue");
+        x.classList.add("red");
+      }
+    };
+
+    btnProcesar.onclick = () => {
+      
+      // leer
+      n1 = txtA.value;
+      n2 = txtB.value;
+
+      // procesar
+      txtSuma.value = parseFloat(n1) + parseFloat(n2);
+      txtResta.value = parseFloat(n1) - parseFloat(n2);
+      txtMultiplicacion.value = parseFloat(n1) * parseFloat(n2);
+      txtDivision.value = parseFloat(n1) / parseFloat(n2);
+      txtResiduo.value = parseFloat(n1) % parseFloat(n2);
+
+      color(txtSuma);
+      color(txtResta);
+      color(txtMultiplicacion);
+      color(txtDivision);
+      color(txtResiduo);
+      //imprimir(s);
+      // imprimir
+    };
+
+    btnLimpiar.onclick = () => {
+      txtA.value = "";
+      txtB.value = "";
+      txtSuma.value = "";
+      txtResta.value = "";
+      txtMultiplicacion.value = "";
+      txtDivision.value = "";
+      txtResiduo.value = "";
+    };
+  </script>
+</html>
