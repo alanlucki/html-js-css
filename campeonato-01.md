@@ -1,10 +1,14 @@
 # Campeonato 01: La comunidad del vicio
 
+## Equipos
+
 |  Cat  |  1  |  2  |  3  |
 |-----------|---------|----------|-------------|
 |  A   |  Víctor Hugo   |  Víctor  |  Jair  |
 |  B   |  Arnold   |  Carlos  |  Nilo  |    |
 |  C   |  Pablo   |  Katty  |  Alan |
+
+## Fixture
 
 |  Partidas  |  Horario  |  Equipos|
 |-----------|---------|----------|
@@ -14,3 +18,11 @@
 |04|Por definir| C - A |
 |05|Por definir| C - B |
 |06|Por definir| B - A |
+
+## Tabla
+
+|  Puesto  |  Equipo  |  PG |  PP |
+|-----------|---------|----------|---|
+|01|A|0|0|
+|02|B|0|0|
+|03|C|0|0|
